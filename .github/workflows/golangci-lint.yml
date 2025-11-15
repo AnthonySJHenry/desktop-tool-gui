@@ -1,0 +1,18 @@
+name: golangci-lint
+on:
+  push:
+    branches: [main]
+    paths: ["backend/**", ".golangci.yml", "go.mod", "go.sum"]
+  pull_request:
+    paths: ["backend/**", ".golangci.yml", "go.mod", "go.sum"]
+jobs:
+  golangci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+      - uses: golangci/golangci-lint-action@v6
+        with:
+          args: --timeout=5m
