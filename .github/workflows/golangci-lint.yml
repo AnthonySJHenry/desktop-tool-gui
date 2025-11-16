@@ -2,9 +2,8 @@ name: golangci-lint
 on:
   push:
     branches: [main]
-    paths: ["**/*.go", ".golangci.yml", "go.mod", "go.sum"]
   pull_request:
-    paths: ["**/*.go", ".golangci.yml", "go.mod", "go.sum"]
+    branches: [main]
 jobs:
   golangci:
     runs-on: ubuntu-latest
