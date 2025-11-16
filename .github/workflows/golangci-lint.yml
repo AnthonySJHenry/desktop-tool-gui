@@ -12,8 +12,8 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: "go.mod"
-      - uses: golangci/golangci-lint-action@v6
+      - uses: golangci/golangci-lint-action@v5
         with:
           version: latest
           install-mode: goinstall
-          args: --disable-all --enable=gosimple --timeout=5m
+          args: --disable-all --enable=gofumpt --timeout=5m
