@@ -1,12 +1,12 @@
 ### Fyne CI/CD Setup Required Critical Dependencies
 
-##### The Problem
+#### The Problem
 Fyne apps fail to build in CI with cryptic errors like:
 - `no export data for "fyne.io/fyne/v2/app"`
 - `fatal error: X11/Xlib.h: No such file or directory`
 - `Package 'gl' was not found in the pkg-config search path`
 
-##### The Solution
+#### The Solution
 For GitHub Actions (Ubuntu runners), you MUST install these system packages:
 
 ```yaml
