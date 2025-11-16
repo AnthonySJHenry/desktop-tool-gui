@@ -14,4 +14,6 @@ jobs:
           go-version-file: "go.mod"
       - uses: golangci/golangci-lint-action@v6
         with:
-          args: --modules-download-mode=vendor --timeout=5m
+          version: latest
+          install-mode: goinstall
+          args: --timeout=5m # Remove vendor mode
