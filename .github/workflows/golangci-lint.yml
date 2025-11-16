@@ -16,3 +16,4 @@ jobs:
         with:
           version: latest
           args: --disable-all --enable=gofumpt,govet,staticcheck,errcheck --timeout=5m
+          skip-cache: true
