@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v5
         with:
           go-version-file: "go.mod"
       - uses: golangci/golangci-lint-action@v6
         with:
           version: latest
           install-mode: goinstall
-          args: --timeout=5m # Remove vendor mode
+          args: --timeout=5m
